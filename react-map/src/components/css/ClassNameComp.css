@@ -1,0 +1,17 @@
+body {
+text-align: center;
+}
+
+
+.on {
+    color: black;
+    background-color: pink;
+    transition: color 2s;
+}
+
+.off {
+    color: lightblue ;
+    background-color: purple;
+    transition: color 2s;
+
+}
