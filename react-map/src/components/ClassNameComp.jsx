@@ -24,7 +24,7 @@ class ClassNameComp extends Component {
             <ul>
                 <li className="on">활성화된 리스트입니다.</li>
                 <li className={ this.state.active ? "on" : "off"}>비활성화 된 리스트입니다.</li>
-                <li className = { this.state.classList }> 활성화된 리스트입니다. </li>
+                <li className = { thisd.state.classList }> 활성화된 리스트입니다. </li>
             </ul>
         </div>
          );
