@@ -14,6 +14,7 @@ import Layout from "./page/Layouts";
 import Home from "./page/Home";
 import Login from "./page/Login"
 import ProductDetail from "./page/ProductDetail";
+import Profile from "./page/Profile";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route index element={<Home />}></Route>
             <Route path="loginform" element={<Login />}></Route>
             <Route path="product/:id" element={<ProductDetail />}></Route>
+            <Route path="/mypage" element={<Profile />} />
                       </Route>
         </Routes>
       </DataProvider>

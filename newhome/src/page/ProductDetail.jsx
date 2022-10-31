@@ -7,36 +7,35 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import DataContext from "../DataContext/DataContext";
 
-const ProductDetail = () => {
+const ProductDetaile = () => {
     const data = useContext(DataContext);
-    const [comments, setComment ] = useState([]);
-
     const {id} = useParams();
+    const [comments, setComments] = useState(
+            data.state.allComments.filter(
+                (comment)=>(comment.productId == id)));
 
-    // 마운트 하자마자 값을 들고와서 출력함
+
+
+    // state.allComment 값이 바뀔때마다 업데이트 
     useEffect(()=>{
-
-    });
+        setComments(data.state.allComments.filter((comment)=>(comment.productId==id)))
+    }, [data.state.allComments]);
 
   // data의 state의 값을 바로 수정해서 사용
   const getProduct = () => { return data.state.productList.find((product)=>(product.productId == id)) }
 
-    return (
-    <div>
-        {console.log(id)}
-       <ProductDisplay product={data.state.productList.find((product)=>(product.productId == id))}/>
-       <br></br>
-       <hr /> 
-       <CommentInput />
-       <br></br>
-       <ListGroup style={{textAlign : "left"}}>
-        <Comment />
-        {
-            data.state.allComments.filter((comment)=>(comment.productId==id)).map((comment)=>(<comment />))
-        }
-       </ListGroup>
-    
-    </div> );
+  return (  
+      <div>
+          <ProductDisplay product={ getProduct() }/>
+          <br></br>
+          <hr />
+          <CommentInput/>
+          <ListGroup style={{textAlign : "left"}}>
+              {comments.map((comment)=>( <Comment key={comment.commentId} comment={comment} />))}
+          </ListGroup>
+
+      </div>
+      );
 }
- 
-export default ProductDetail;
+
+export default ProductDetaile;

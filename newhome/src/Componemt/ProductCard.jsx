@@ -66,10 +66,11 @@ function ProductCard(props)  {
     };
 
     return ( <div>
-        <Card Style={{ width:'13rem'}}>
+        <Card style={{ width: '13rem',height:'30rem' , display:"inline-block" , boxShadow:"0 0 1px 1px lightgray"}}>
+
             <Card.Img       
             onClick={()=>{navigate("/product/"+product.productId)}}
-      variant="top" src={require(`../image/${product.productPicture[0]}`)} />
+      variant="top" src={require(`../image/${product.productPicture[0]}`)} height="300px"/>
             <Card.Body>
                 <Card.Title>{product.productName}</Card.Title>
                 {/** 로그인이 되어있다면 버튼을 클릭했을때 유저의 Likelist에 추가하기  */}

@@ -4,6 +4,7 @@
 import { useState } from "react";
 import { createContext } from "react";
 import { NavItem } from "react-bootstrap";
+import { act } from "react-dom/test-utils";
 // 내보낸 DataContext에 value을 넣어줘서 사용
 const DataContext = createContext();
 
@@ -65,13 +66,17 @@ const DataProvider = ({children}) => {
             productId : 1,
             name : "blue",
             text : "괜찮습니다"
-        }
+        },
+        
     ])
+    // useState를 사용하지 않은 변수는 리액트 업데이트를 일으키지 않는다. 
+    let [commentCount, setCommentCount] = useState(3); 
 
     // 사용할 value 값을 state와 action 분리해서 넣어둠
     const value = {
-        state : {user, productList, allComments},
-        action : {setUser, setProductList, setAllComments}
+        state : {user, productList, allComments, commentCount},
+        action : {setUser, setProductList, setAllComments,setCommentCount}
+    
     };
     // DataProvider를 사용할때 DataContext.Provider를 사용할수 있도록함
     // 이때 children은 Provider을 쓸때 데이터를 공용을 쓰는 컴포넌트들

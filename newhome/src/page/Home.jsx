@@ -11,7 +11,7 @@ const Home = () => {
     const settings = {
       infinite: true,
       speed: 500,
-      slidesToShow: 2,
+      slidesToShow: 4,
       slidesToScroll: 1,
           nextArrow: <SampleNextArrow />,
           prevArrow: <SamplePrevArrow />

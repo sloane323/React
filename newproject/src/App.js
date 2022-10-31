@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, Link} from 'react-router-dom';
+import { Routes, Route} from 'react-router-dom';
 import Footer from './Page/Footer';
 
 import Info from './Page/Info';
@@ -14,6 +14,7 @@ import Booking from './Page/Booking';
 import Review from './Page/Review';
 import About from './Page/About';
 import Menu from './Page/Meue';
+
 
 
 
