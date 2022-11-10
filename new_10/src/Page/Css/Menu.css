@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'MICEGothic Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+#headerbig {
+  width: 100%;
+  height:fit-content;
+
+}
+
+#menu-hd {
+
+    font-family: 'MICEGothic Bold';
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+    margin-top: 40px;
+    height: 10px;
+  }
+  .grid-it1,  .grid-it2,  .grid-it3 , .grid-it4 ,  .grid-it5 {
+    display: flex;
+    align-self: center;
+    grid-column: 1fr;
+    text-decoration-style: none;
+    text-decoration-line: none;
+  }
+  
+
+  #menu2 {
+    opacity: 0%;
+    color: #89CFD3;
+    transition: all 0.35s ease;
+    transform: translate(0px, -60px);
+  }
+
+  #menu1 {
+    transition: all 0.35s ease;
+  }
+
+  #menu1:hover {
+    scale: 180%;
+    opacity: 25%;
+    transition: all 0.35s ease;
+  }
+
+  #menu1:hover  + #menu2 {
+    opacity: 100%;
+  }
+
+ 

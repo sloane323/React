@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'MICEGothic Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+#datebox2 {
+    text-align: center;
+    width: 520px;
+    padding: 20px;
+    overflow: scroll;
+    color: #112031;
+    border: none; 
+     /* 가로 스크롤 */
+    overflow: auto;
+    white-space: nowrap;
+
+}
+
+
+#datebox {
+    margin: 5px;
+
+}
+#datebox button {
+    display: inline-block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+
+}
+
+#datebox button:hover {
+    background-color: black;
+    color: white;
+}
+
+.modal-booking {
+    width:50%;
+    height: 30%;
+    text-align: center;
+    display: none;
+    border: 1px solid black;
+    position: fixed;
+    background-color: white;
+    left:30%;
+    top: 10%;
+}

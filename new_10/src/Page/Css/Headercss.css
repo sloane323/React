@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'MICEGothic Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+#headerbig {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: 'MICEGothic normal';
+    font-weight: 700;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    justify-content: space-between;
+    color: #89CFD3 ;
+    padding: 10px;
+    box-sizing: border-box;
+   
+}
+
+#titlename {
+    display: flex;
+    align-self: center;
+    grid-column: 1fr;
+    font-size: 25px;
+    position: relative;
+}
+
+#icon-hd {
+    display: flex;
+    grid-column:1fr;
+    align-self: end;
+    margin-left: auto;
+
+
+}
+
+#titlename{cursor: pointer;}
+#titlename:hover .highlight:after{
+  width:100%;
+}
+
+#titlename:hover .highlight {
+    color:white;
+}
+.highlight{
+  display: inline-block; 
+  position: relative;
+  color:#89CFD3;
+}
+.highlight:after{
+  content:"";
+  width: 0;
+  height: 30px;
+  display: inline-block;
+  background: #89CFD3;
+  color: white;
+  position: absolute;
+  bottom:0;
+  left:0;
+  z-index:-1;
+  transition: 0.35s all;
+}
+
+.e {
+    font-size: 20px;
+}
+
+#icon-hd1 {
+    margin-right: 10px;
+    text-align: center;
+}
+
+.modalbig{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.modalpa .modalpa2{
+    display: flex;
+    grid-column:1fr;
+}
+
+.modalbig button{
+    background-color: none;
+    border: none;
+}
